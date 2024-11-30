@@ -1,0 +1,12 @@
+# develop.yml stack
+version: '3.2'
+
+services: 
+
+
+           
+
+networks:
+  azh:
+    driver: overlay
+    attachable: true
