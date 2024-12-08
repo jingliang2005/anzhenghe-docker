@@ -1,9 +1,12 @@
 # Squid
 
-## 
+## Squid 用法
 
-* https://www.oreilly.com/library/view/squid-the-definitive/0596001622/
+浏览器访问在线 [权威指南](https://www.oreilly.com/library/view/squid-the-definitive/0596001622/) 查看详细内容。
+或者使用命令行帮助：squid -h 。
 
+```sh
+squid -h
 Usage: squid [-cdzCFNRVYX] [-n name] [-s | -l facility] [-f config-file] [-[au] port] [-k signal]
     -h | --help       Print help message.
     -v | --version    Print version details.
@@ -35,3 +38,19 @@ Usage: squid [-cdzCFNRVYX] [-n name] [-s | -l facility] [-f config-file] [-[au] 
        -X        Force full debugging.
                  Add -d9 to also write full debugging to stderr.
        -Y        Only return UDP_HIT or UDP_MISS_NOFETCH during fast reload.
+```
+
+### 相关目录
+
+* /etc/squid/squid.conf           #配置文件
+* /etc/rc.d/init.d/squid          #启动脚本
+* /usr/sbin/squid                 #二进制命令
+* /usr/share/doc/squid-3.1.10     #手册
+* /var/log/squid                  #日志目录
+* /var/spool/squid                #缓存目录
+
+## 配置
+
+## 缓存代理
+
+## Http转发

@@ -1,12 +1,19 @@
 # develop.yml stack
-version: '3.2'
+# version: '3.2'
 
 services: 
-
+  squid-proxy:
+    build: ./squid
+    container_name: squid
+    restart: always
+    ports:
+      - '3128:3128'
+    volumes:
+      - squid-conf:/etc/squid
+      - squid-logs:/var/log/squid
 
            
+volumes:
+  squid-conf:
+  squid-logs:
 
-networks:
-  azh:
-    driver: overlay
-    attachable: true
