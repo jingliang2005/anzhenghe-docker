@@ -1,5 +1,10 @@
 # Network
 
+```sh
+    cd network/
+    docker compose -f network.yml up -d
+```
+
 ## nginx
 
 ## squid (Proxy and cache)

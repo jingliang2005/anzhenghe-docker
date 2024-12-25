@@ -6,7 +6,8 @@ HEALTHCHECK --interval=3s --retries=20 CMD nc -z localhost 3128
 
 RUN apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get upgrade -y \
- && DEBIAN_FRONTEND=noninteractive apt-get install -y squid nano \
+ && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+ squid squidguard nano \
  && DEBIAN_FRONTEND=noninteractive apt-get autoremove -y \
  && rm -rf /var/lib/apt/lists/* 
 

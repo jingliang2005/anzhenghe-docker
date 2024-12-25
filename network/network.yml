@@ -11,9 +11,11 @@ services:
     volumes:
       - squid-conf:/etc/squid
       - squid-logs:/var/log/squid
+      - squid-cache:/var/spool/squid
 
            
 volumes:
   squid-conf:
   squid-logs:
+  squid-cache:
 
