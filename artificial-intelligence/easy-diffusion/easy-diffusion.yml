@@ -1,0 +1,23 @@
+# develop.yml stack
+# version: '3.2'
+
+services: 
+  easy-diffusion:
+    build: .
+    container_name: easy-diffusion
+    restart: always
+    ports:
+      - '16030:9000'
+    volumes:
+      - easy-diffusion:/opt/easy-diffusion
+    deploy:
+      resources:
+         reservations:
+           devices:
+             - driver: nvidia
+               count: 1
+               capabilities: [gpu]           
+
+volumes:
+  easy-diffusion:
+

@@ -1,0 +1,23 @@
+# develop.yml stack
+# version: '3.2'
+
+services: 
+  stable-diffusion-webui:
+    build: .
+    container_name: AUTOMATIC1111-stable-diffusion-webui
+    restart: always
+    ports:
+      - '16020:7860'
+    volumes:
+      - AUTOMATIC1111-stable-diffusion-webui:/opt/AUTOMATIC1111/stable-diffusion-webui
+    deploy:
+      resources:
+         reservations:
+           devices:
+             - driver: nvidia
+               count: 1
+               capabilities: [gpu]           
+
+volumes:
+  AUTOMATIC1111-stable-diffusion-webui:
+
